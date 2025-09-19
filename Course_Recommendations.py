@@ -1,6 +1,6 @@
 # Math
-def mathCourseRecommendation(grade, fav_sub):
-    if grade >= 1 and grade <= 8 and fav_sub == "math":
+def mathCourseRecommendation(grade, grade_math, high_math):
+    if grade >= 1 and grade <= 8:
         # Sets suffix to match the grade number.
         match grade:
             case 1:
@@ -20,7 +20,7 @@ def mathCourseRecommendation(grade, fav_sub):
                 link = "https://www.khanacademy.org/math/cc-fifth-grade-math"
             case 6:
                 suf = "th"
-                link = "https://www.khanacademy.org/math/cc-sixth-grade-math
+                link = "https://www.khanacademy.org/math/cc-sixth-grade-math"
             case 7:
                 suf = "th"
                 link = "https://www.khanacademy.org/math/cc-seventh-grade-math"
@@ -28,7 +28,7 @@ def mathCourseRecommendation(grade, fav_sub):
                 suf = "th"
                 link = "https://www.khanacademy.org/math/cc-eighth-grade-math"
         rec = str(grade) + suf + grade_math
-    if grade >=9 and fav_sub == "math":
+    if grade >=9:
         rec = high_math
         link = "https://www.khanacademy.org/math/trigonometry"
 
@@ -54,8 +54,8 @@ def scienceCourseRecommendation(grade, fav_sub, mid_sci, high_sci):
         link = "https://www.khanacademy.org/science/hs-chemistry"
 
 # Language Arts
-def languageartsCourseRecommendation(grade, fav_sub, read, vocab, grammar):
-    if grade >= 2 and grade <= 5 and fav_sub == "language arts":
+def languageartsCourseRecommendation(grade, read, vocab, grammar):
+    if grade >= 2 and grade <= 5:
         # Sets suffix to math the grade number.
         match grade:
             case 2:
@@ -68,7 +68,7 @@ def languageartsCourseRecommendation(grade, fav_sub, read, vocab, grammar):
                 suf = "th"
                 link = "https://www.khanacademy.org/ela/cc-4th-reading-vocab"
         rec = str(grade) + suf + read
-    elif grade > 6 and grade <= 10 and fav_sub == "language arts":
+    elif grade > 6 and grade <= 10:
         suf = "th"
         rec = str(grade) + suf + vocab
         # Links for grades four to ten.
@@ -85,6 +85,6 @@ def languageartsCourseRecommendation(grade, fav_sub, read, vocab, grammar):
                 link = "https://www.khanacademy.org/ela/cc-9th-reading-vocab"
             case 10:
                 link = "https://www.khanacademy.org/ela/10th-grade-reading-and-vocabulary"
-    elif grade > 10 or grade == 1 and fav_sub == "language arts":
+    elif grade > 10 or grade == 1:
         rec = grammar
         link = "https://www.khanacademy.org/humanities/grammar"

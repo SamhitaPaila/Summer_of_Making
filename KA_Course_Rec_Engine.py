@@ -62,39 +62,37 @@ while True:
 rec = ""
 link = ""
 
-# Computing
-if fav_sub == "computing":
-    rec = comp
-    link = "https://www.khanacademy.org/computing/pixar"
+match fav_sub:
+    # Computing
+    case "computing":
+        rec = comp
+        link = "https://www.khanacademy.org/computing/pixar"
+    # Life Skills
+    case "life skills":
+        rec = life_skills
+        link = "https://www.khanacademy.org/college-careers-more/financial-literacy"
+    # Math
+    case "math":
+        mathCourseRecommendation(grade, grade_math, high_math)
+    # Science
+    case "science":
+        scienceCourseRecommendation(grade, fav_sub, mid_sci, high_sci)
+    # Economics
+    case "economics":
+        rec = economics
+        link = "https://www.khanacademy.org/economics-finance-domain/core-finance"
+    # History
+    case "history":
+        rec = hist
+        link = "https://www.khanacademy.org/humanities/world-history"
+    # Test Prep
+    case "test prep":
+        rec = test
+        link = "https://www.khanacademy.org/test-prep/mcat"
+    # Language Arts
+    case "language arts":
+        languageartsCourseRecommendation(grade, read, vocab, grammar)
 
-# Life Skills
-if fav_sub == "life skills":
-    rec = life_skills
-    link = "https://www.khanacademy.org/college-careers-more/financial-literacy"
-
-# Math
-mathCourseRecommendation(grade, fav_sub)
-
-# Science
-scienceCourseRecommendation(grade, fav_sub, mid_sci, high_sci)
-
-# Economics
-if fav_sub == "economics":
-    rec = economics
-    link = "https://www.khanacademy.org/economics-finance-domain/core-finance"
-
-# History
-if fav_sub == "history":
-    rec = hist
-    link = "https://www.khanacademy.org/humanities/world-history"
-
-# Test Prep
-if fav_sub == "test prep":
-    rec = test
-    link = "https://www.khanacademy.org/test-prep/mcat"
-
-# Language Arts
-languageartsCourseRecommendation(grade, fav_sub, read, vocab, grammar)
 
 # Khan Academy course recommendation.
 
