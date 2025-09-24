@@ -31,27 +31,29 @@ def mathCourseRecommendation(grade, grade_math, high_math):
     if grade >=9:
         rec = high_math
         link = "https://www.khanacademy.org/math/trigonometry"
+    return rec, link
 
 # Science
 def scienceCourseRecommendation(grade, fav_sub, mid_sci, high_sci):
-    if grade <= 8 and fav_sub == "biology":
+    if grade <= 8 and fav_sub == "Biology":
         rec = mid_sci + fav_sub
         link = "https://www.khanacademy.org/science/ms-biology"
-    if grade <= 8 and fav_sub == "physics":
+    if grade <= 8 and fav_sub == "Physics":
         rec = mid_sci + fav_sub
         link = "https://www.khanacademy.org/science/ms-physics"
-    if grade <= 8 and fav_sub == "chemistry":
+    if grade <= 8 and fav_sub == "Chemistry":
         rec = mid_sci + fav_sub
         link = "https://www.khanacademy.org/science/ms-chemistry"
-    if grade >= 9 and fav_sub == "biology":
+    if grade >= 9 and fav_sub == "Biology":
         rec = high_sci + fav_sub
         link = "https://www.khanacademy.org/science/hs-biology"
-    if grade >= 9 and fav_sub == "physics":
+    if grade >= 9 and fav_sub == "Physics":
         rec = high_sci + fav_sub
         link = "https://www.khanacademy.org/science/hs-physics"
-    if grade >= 9 and fav_sub == "chemistry":
+    if grade >= 9 and fav_sub == "Chemistry":
         rec = high_sci + fav_sub
         link = "https://www.khanacademy.org/science/hs-chemistry"
+    return rec, link
 
 # Language Arts
 def languageartsCourseRecommendation(grade, read, vocab, grammar):
@@ -88,3 +90,4 @@ def languageartsCourseRecommendation(grade, read, vocab, grammar):
     elif grade > 10 or grade == 1:
         rec = grammar
         link = "https://www.khanacademy.org/humanities/grammar"
+    return rec, link
